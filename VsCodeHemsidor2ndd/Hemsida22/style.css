@@ -1,0 +1,491 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #4891ff;
+    --light-color: #f4f4f6;
+    --dark-color: #111;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #e4e4e4;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar{
+    position: relative;
+    z-index: 10;
+}
+
+.navbar .logo {
+    margin: 0 0 0 10px;
+}
+
+.navbar .logo a {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.navbar .logo img {
+    width: 250px;
+    height: auto;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    transition: all 0.3s ease;
+    will-change: filter;
+}
+
+.navbar .logo a:hover img {
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background: #ffffff00;
+    padding-top: 20px;
+}
+
+.navbar ul{
+    
+    display: flex;
+    margin-right: 30px;
+    margin-top: -15px;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    display: block;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    will-change: color;
+}
+
+.navbar .main-menu ul li a i {
+    position: relative;
+    bottom: 1px;
+    margin-right: 7px;
+    
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.navbar ul li:last-child a{
+    margin-left: 10px;
+}
+
+
+
+.hero {
+    background: url(Images/Hero4bg.jpg) no-repeat center center;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    color: #fff;
+    
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: -100px;
+    padding-top: 70px;
+    padding-bottom: 40px;
+
+}
+
+.hero .container .hero-heading {
+    margin-bottom: 100px;
+    margin-top: 40px;
+    justify-content: center;
+    text-align: center;
+    filter: drop-shadow(1px 1px 2px rgb(0, 0, 0, 0.5));
+    
+}
+
+.hero .hero-heading h2 {
+    display: inline-block;
+    color: #fff;
+    font-weight: 800;
+}
+
+.hero .container .hero-images {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.hero .container .hero-images img{
+    width: 250px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px rgb(0, 0, 0, 0.6));
+    border-radius: 10px;
+}
+
+.hero .container .hero-stuff {
+    height: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+    
+}
+
+.hero .container .hero-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    
+   
+}
+
+.hero .container .hero-content ul {
+   
+    line-height: 2;
+}
+
+.hero .container .hero-content ul li{
+    font-weight: 600;
+}
+
+
+
+
+/* cards */
+
+
+#we-offer {
+    position: relative;
+}
+
+#we-offer::after {
+    content: '';
+    position: absolute;
+    left: -10%;
+    bottom: 0;
+    width: 120%;
+    height: 3px;
+    background: rgb(136, 136, 136);
+}
+
+#we-offer::before {
+    content: '';
+    position: absolute;
+    left: -10%;
+    bottom: -300px;
+    width: 120%;
+    height: 300px;
+    background: linear-gradient(to top, #adadad00, #adadad);
+    
+}
+
+.hero .cards ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    
+}
+
+.hero .cards li{
+    height: auto;
+    margin: 10px 10px;
+}
+
+.hero .card {
+    width: 400px;
+    height: 100px;
+    background: #f8f8f82f;
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    
+    text-align: center;
+
+}
+
+.hero .card p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.hero .front-text {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    filter: drop-shadow(1px 1px 2px rgb(0, 0, 0, 0.3));
+    opacity: 1;
+
+    transition: all 0.3s;
+}
+
+.hero .back-text {
+    width: 100%;
+    text-align: start;
+    padding-left: 20px;
+    opacity: 0;
+
+    transition: all 0.3s;
+}
+
+.hero .card:hover .back-text {
+    opacity: 1;
+}
+
+.hero .card:hover .front-text {
+    opacity: 0;
+}
+
+.hero .card:hover {
+    background: #c5c5c52f;
+}
+
+
+
+
+/*scrollbar*/
+.scrolling .container{
+    
+    position: relative;
+    
+}
+.scrolling .scrollbar{
+    
+    width: 90%;
+    height: 100px;
+    position: relative;
+    margin: 40px 0;
+    margin-inline: auto;
+    overflow: hidden;
+
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+}
+
+@keyframes listAnimation {
+    to {
+        left: -200px;
+    }
+}
+
+.scrolling .item {
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    position: absolute;
+    left: calc(200px * 9);
+    animation-name: listAnimation;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+
+.scrolling .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    
+}
+
+.i1 { animation-delay: calc(15s / 6 * 0 * -1); } /* 0s */
+.i2 { animation-delay: calc(15s / 6 * 1 * -1); } /* -2.5s */
+.i3 { animation-delay: calc(15s / 6 * 2 * -1); } /* -5s */
+.i4 { animation-delay: calc(15s / 6 * 3 * -1); } /* -7.5s */
+.i5 { animation-delay: calc(15s / 6 * 4 * -1); } /* -10s */
+.i6 { animation-delay: calc(15s / 6 * 5 * -1); } /* -12.5s */
+
+
+.buy.container{
+    border: 2px solid red;
+    padding-bottom: 200px;
+}
+
+.pictures{
+    
+    border: 2px solid rgb(255, 0, 191);
+    
+}
+
+.bigPicture {
+
+    width: 30%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider {
+    border: 2px solid rgb(38, 0, 255);
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+  
+  .slider .slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .scrollPictures {
+    border: 2px solid rgb(47, 0, 255);
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .scrollPictures .thumb {
+    
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+  }
+  .scrollPictures .thumb.active {
+    border: 2px solid red;
+  }
+  
+
+
+
+
+
+
+
+
+
+/* Allmänna CSS klasser */
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+   
+
+}
+
+.container-sm{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+}
+
+/* buttons */
+
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background: var(--light-color);
+    color: #333;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0));
+    transition: 0.5s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Text Classes*/
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 40px 0 20px;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
